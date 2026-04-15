@@ -1,10 +1,10 @@
 # 🍕 Análise de Vendas de Pizzaria
 
-## Venda de pizza por sabor
+## 1- Venda de pizza por sabor
 
 Para responder quais são as cinco pizzas mais vendidas e as cinco menos vendidas, foi criada a medida `[total_vendas]`.
 
-### 1.1. Mais vendidas
+### 1.1- Mais vendidas
 
 #### Por faturamento
 
@@ -33,26 +33,34 @@ Utiliza as mesmas medidas já criadas.
 
 ---
 
-## Venda de pizza por tamanho
+## 2- Venda de pizza por tamanho
 
 Utiliza as mesmas medidas já criadas anteriormente.
 
 ---
 
-## Desempenho das vendas trimestrais
+## 3- Desempenho das vendas mês a mês e trimestrais
 
 - Uso de hierarquia na coluna `date` da tabela `orders`
 - Medida utilizada: `[total_vendas]`
 
 ### Perguntas respondidas:
-- Qual trimestre tem as melhores vendas?
-- Qual trimestre tem as piores vendas?
+- Qual trimestre tem as melhores vendas? Redobrar atenção a contratação de funcionários temporários e de estoque para dar conta da demanda. 
+- Qual trimestre tem as piores vendas? Reduzir custos fixos renegociando contratos, cortando insumos e reduzindo o cardário, deixando de oferecer os sabores de pior faturamento.
 
 ---
 
-## Margem de lucro x Share de vendas
+## 4- Faturamento médio de cada dia da semana
 
-### 4.1. Margem de lucro
+### Perguntas respondidas:
+- Qual dia tem as melhores médias de faturamento? Como a casa fica cheia, é sugerido ao marketing buscar aumentar o ticket médio. 
+- Qual dia tem as piores médias de faturamento? É sugerido à equipe de marketing atrair o público com promoções ou um programa de compra coletiva. 
+
+---
+
+## 5- Margem de lucro x Share de vendas
+
+### 5.1- Margem de lucro
 
 **Observação:**
 - Veggie = 25%
@@ -95,7 +103,7 @@ margem_lucro_perc = DIVIDE([lucro_liquido], [total_vendas]) // margem_lucro_perc
 
 ---
 
-### 4.2. Share de vendas por categoria
+### 5.2- Share de vendas por categoria
 
 ```DAX
 share_vendas_por_cat =
@@ -116,7 +124,7 @@ DIVIDE (VendasCategoria, VendasDaLoja, 0)
 
 ---
 
-### 4.3. Share por pizza
+### 5.3- Share por pizza
 
 ```DAX
 share_vendas_por_pizza =
