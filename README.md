@@ -32,7 +32,7 @@ Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Marg
 ---
 
 ### 🚀 Modelagem de dados:
-As medidas criadas com código DAX estão demonstradas e comendadas no arquivo dax.md, onde estão dividos conforme abaixo:
+As medidas criadas com código DAX estão demonstradas e comendadas no arquivo [dax.md](https://github.com/amdreh/pizza_sales/blob/main/1_modelagem_dax/dax.md), onde estão dividos conforme abaixo:
 
 * 1- Venda de pizza por sabor
 * 2- Venda de pizza por tamanho
@@ -54,7 +54,7 @@ Na primeira fase, utilizei código DAX para implementar regras de negócio robus
 ### 📂 Estrutura do Repositório
 Os arquivos do projeto estão organizados da seguinte forma:
 
-* **1_modelagem_dax**: Contém o arquivo `dax.md`, com a documentação e explicação de cada medida criada.
+* **1_modelagem_dax**: Contém o arquivo [dax.md](https://github.com/amdreh/pizza_sales/blob/main/1_modelagem_dax/dax.md), com a documentação e explicação de cada medida criada.
 * **2_dashboard**: Local reservado para os dashboards que responderão às questões propostas. *(Em desenvolvimento)*
 * **3_relatorio**: Espaço para o relatório analítico comparativo entre share e margem. *(Em desenvolvimento)*
 * **data**: Base de dados original (arquivos .csv) disponibilizada via Kaggle.
