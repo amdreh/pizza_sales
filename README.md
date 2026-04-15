@@ -21,7 +21,7 @@ Este projeto visa transformar dados transacionais em indicadores estratégicos p
 O objetivo central é responder a perguntas críticas de negócio:
 * Quais são as 5 melhores e as 5 piores pizzas por faturamento e por quantidade vendida?
 * Qual é o tamanho de pizza mais vendido?
-* Qual foi o faturamento mês a mês do ano?
+* Qual foi o faturamento mês a mês do ano? E trimestre a trimestre?
 * Qual foi o faturamento médio de cada dia da semama?
 
 Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Margem de Lucro** para orientar decisões estratégicas, como:
