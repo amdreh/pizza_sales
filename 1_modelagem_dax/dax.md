@@ -124,7 +124,7 @@ DIVIDE (VendasCategoria, VendasDaLoja, 0)
 
 ---
 
-### 5.3- Share por pizza
+### Share por pizza
 
 ```DAX
 share_vendas_por_pizza =
