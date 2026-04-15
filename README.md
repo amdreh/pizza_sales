@@ -31,6 +31,17 @@ Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Marg
 
 ---
 
+### 🚀 Modelagem de dados:
+As medidas criadas com código DAX estão demonstradas e comendadas no arquivo dax.md, onde estão dividos conforme abaixo:
+
+* 1- Venda de pizza por sabor
+* 2- Venda de pizza por tamanho
+* 3- Desempenho de vendas mensal/trimestral
+* 4- Faturamento médio de cada dia da semana
+* 5- Margem de lucro x Share de vendas
+
+---
+
 ### 🧠 Metodologia e Desenvolvimento
 Na primeira fase, utilizei código DAX para implementar regras de negócio robustas em uma análise de faturamento:
 
