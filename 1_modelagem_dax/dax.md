@@ -12,7 +12,7 @@ Para responder quais são as cinco pizzas mais vendidas e as cinco menos vendida
 faturamento_relativo = 
 SUMX( // SUMX é um somatório que percorre toda a tabela order_details linha a linha.
     order_details,
-    order_details[quantity] * RELATED(pizzas[price]) // total_vendas recebe somatório do produto da quantidade de pedidos com o preço das pizzas de dada linha.
+    order_details[quantity] * RELATED(pizzas[price]) // faturamento_relativo recebe somatório do produto da quantidade de pedidos com o preço das pizzas de dada linha.
 )
 ```
 
