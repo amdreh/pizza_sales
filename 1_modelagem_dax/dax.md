@@ -25,11 +25,20 @@ DIVIDE(
     [faturamento_absoluto]
 )
 ```
+Sendo [faturamento_absoluto]:
 
-**Qual é a diferença entre faturamento e quantidade?**
+```DAX
+faturamento_absoluto = 
+CALCULATE(
+    [faturamento_relativo], 
+    ALL(pizza_types)
+)
+```
 
-- A quantidade mostra apenas o volume de produção (quais mais saíram do forno).
-- O faturamento mostra quais pizzas geram mais dinheiro, considerando preço e margem.
+>**Qual é a diferença entre faturamento e quantidade?**
+>
+>- A quantidade mostra apenas o volume de produção (quais mais saíram do forno).
+>- O faturamento mostra quais pizzas geram mais dinheiro, considerando preço e margem.
 
 #### Por quantidade
 
