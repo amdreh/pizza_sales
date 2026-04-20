@@ -2,14 +2,14 @@
 
 ## 1- Venda de pizza por sabor
 
-Para responder quais são as cinco pizzas mais vendidas e as cinco menos vendidas, foi criada a medida `[total_vendas]`.
+Para responder quais são as cinco pizzas mais vendidas e as cinco menos vendidas, foi criada a medida `[faturamento_relativo]`.
 
 ### 1.1- Mais vendidas
 
 #### Por faturamento
 
 ```DAX
-total_vendas = 
+faturamento_relativo = 
 SUMX( // SUMX é um somatório que percorre toda a tabela order_details linha a linha.
     order_details,
     order_details[quantity] * RELATED(pizzas[price]) // total_vendas recebe somatório do produto da quantidade de pedidos com o preço das pizzas de dada linha.
@@ -42,7 +42,7 @@ Utiliza as mesmas medidas já criadas anteriormente.
 ## 3- Desempenho das vendas mês a mês e trimestrais
 
 - Uso de hierarquia na coluna `date` da tabela `orders`
-- Medida utilizada: `[total_vendas]`
+- Medida utilizada: `[faturamento_relativo]`
 
 ### Perguntas respondidas:
 - Qual trimestre tem as melhores vendas? Redobrar atenção a contratação de funcionários temporários e de estoque para dar conta da demanda. 
@@ -98,7 +98,7 @@ SUMX(
 #### Margem de lucro
 
 ```DAX
-margem_lucro_perc = DIVIDE([lucro_liquido], [total_vendas]) // margem_lucro_perc recebe a divisão do [lucro_liquido] pelo [total_vendas].
+margem_lucro_perc = DIVIDE([lucro_liquido], [faturamento_relativo]) // margem_lucro_perc recebe a divisão do [lucro_liquido] pelo [faturamento_relativo].
 ```
 
 ---
@@ -108,9 +108,9 @@ margem_lucro_perc = DIVIDE([lucro_liquido], [total_vendas]) // margem_lucro_perc
 ```DAX
 share_vendas_por_cat =
 
-VAR VendasCategoria = [total_vendas]
+VAR VendasCategoria = [faturamento_relativo]
 
-VAR VendasDaLoja = CALCULATE([total_vendas], ALL(pizza_types))
+VAR VendasDaLoja = CALCULATE([faturamento_relativo], ALL(pizza_types))
 
 RETURN
 
@@ -129,8 +129,8 @@ DIVIDE (VendasCategoria, VendasDaLoja, 0)
 ```DAX
 share_vendas_por_pizza =
 
-VAR VendaSabor = [total_vendas]
-VAR VendaTotal = CALCULATE([total_vendas], ALL(pizzas))
+VAR VendaSabor = [faturamento_relativo]
+VAR VendaTotal = CALCULATE([faturamento_relativo], ALL(pizzas))
 
 RETURN
 
