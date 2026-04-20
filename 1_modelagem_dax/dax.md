@@ -4,15 +4,25 @@
 
 Para responder quais são as cinco pizzas mais vendidas e as cinco menos vendidas, foi criada a medida `[faturamento_relativo]`.
 
-### 1.1- Mais vendidas
-
-#### Por faturamento
-
 ```DAX
 faturamento_relativo = 
 SUMX( // SUMX é um somatório que percorre toda a tabela order_details linha a linha.
     order_details,
     order_details[quantity] * RELATED(pizzas[price]) // faturamento_relativo recebe somatório do produto da quantidade de pedidos com o preço das pizzas de dada linha.
+)
+```
+
+### 1.1- Mais vendidas
+
+#### Por faturamento
+
+Para mostrar porcentagens absolutas no gráfico de barras com filtro n superior criei esta medida abaixo, que calcula a participação percentual de cada pizza no faturamento.
+
+```DAX
+faturamento_%_share = 
+DIVIDE(
+    [faturamento_relativo], 
+    [faturamento_absoluto]
 )
 ```
 
