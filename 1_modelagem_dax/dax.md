@@ -90,10 +90,10 @@ Utiliza as mesmas medidas já criadas anteriormente.
 #### Custo total
 
 ```DAX
-custo_total =
+custo_estimado =
 
 SUMX(
-    order_details, // A função SUMX vai percorrer a tabela order_details linha a linha, fazer um somatório e retornar o resultado na medida custo_total.
+    order_details, // A função SUMX vai percorrer a tabela order_details linha a linha, fazer um somatório e retornar o resultado na medida custo_estimado.
 
     VAR Percentual =
         SWITCH(
@@ -117,7 +117,7 @@ SUMX(
 #### Margem de lucro
 
 ```DAX
-margem_lucro_perc = DIVIDE([lucro_liquido], [faturamento_relativo]) // margem_lucro_perc recebe a divisão do [lucro_liquido] pelo [faturamento_relativo].
+margem_lucro_perc = DIVIDE([lucro_liquido], [faturamento_relativo],0)  // margem_lucro_perc recebe a divisão do [lucro_liquido] pelo [faturamento_relativo].
 ```
 
 ---
@@ -125,15 +125,16 @@ margem_lucro_perc = DIVIDE([lucro_liquido], [faturamento_relativo]) // margem_lu
 ### 5.2- Share de vendas por categoria
 
 ```DAX
-share_vendas_por_cat =
-
+share_vendas_por_cat = 
+//Criei a variável VendasCategoria recebendo o conteúdo de total vendas
 VAR VendasCategoria = [faturamento_relativo]
 
+//Criei a variável VendaDaLoja recebendo o somatório dos valores de vendas_total em sua integralidade, ignorando qualquer restrição de filtros que atuem sobre a tabela pizza_types 
 VAR VendasDaLoja = CALCULATE([faturamento_relativo], ALL(pizza_types))
 
 RETURN
-
-DIVIDE (VendasCategoria, VendasDaLoja, 0)
+//Após o return é feita a operação propriamente dita, dividindo as variáveis acima criadas uma pela outra. O zero é o valor alternativo a ser utilizado caso a divisão tenha um resultado inválido
+DIVIDE (vendasCategoria, VendasDaLoja, 0)
 ```
 
 **Por que usar margem + share?**
@@ -146,13 +147,11 @@ DIVIDE (VendasCategoria, VendasDaLoja, 0)
 ### Share por pizza
 
 ```DAX
-share_vendas_por_pizza =
-
+share_vendas_por_pizza = 
 VAR VendaSabor = [faturamento_relativo]
-VAR VendaTotal = CALCULATE([faturamento_relativo], ALL(pizzas))
+VAR VendaTotal = CALCULATE([faturamento_relativo], ALL(pizzas)) // Ignora os filtros da pizza e pega o total geral
 
 RETURN
-
 DIVIDE(VendaSabor, VendaTotal, 0)
 ```
 
@@ -190,3 +189,14 @@ RETURN Ranking
 ## Margem de lucro percentual
 
 O processo é o mesmo do cálculo de share, substituindo `[share_vendas_por_pizza]` por `[margem_lucro_perc]`.
+
+```DAX
+estrelas_margem = 
+VAR Valor = [margem_lucro_perc]
+RETURN
+    IF(Valor >= 0.60, "★★★★★",
+    IF(Valor >= 0.56, "★★★★",
+    IF(Valor >= 0.52, "★★★",
+    IF(Valor >= 0.49, "★★", 
+    "★"))))
+```
