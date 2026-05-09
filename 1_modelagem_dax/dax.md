@@ -200,3 +200,51 @@ RETURN
     IF(Valor >= 0.49, "★★", 
     "★"))))
 ```
+## 6- Outras medidas
+
+```DAX
+faturamento_medio_por_dia = 
+AVERAGEX( // Calcula a média linha por linha
+    VALUES(orders[date]), // Pega as datas da coluna date sem repetições.
+    [faturamento_relativo]
+)
+
+// Se fosse pegar datas repetidas, o cálculo consideraria cada pedido do dia. 
+```
+
+```DAX
+
+lucro_liquido = [faturamento_relativo]-[custo_estimado]
+```
+
+```DAX
+maiores_piores_faturamentos = 
+VAR _rank_top = RANKX(ALL(pizza_types[name]), [faturamento_relativo], , DESC, DENSE) // Cria uma variável que classifica todas as pizzas por faturamento, em ordem decrescente e mantendo valores empatados
+
+VAR _rank_bottom = RANKX(ALL(pizza_types[name]), [faturamento_relativo], , ASC, DENSE) // A única diferença para o bloco de cima é a ordem crescente
+
+VAR _resultado = IF(_rank_top <= 5, [faturamento_relativo], IF(_rank_bottom <= 5, [faturamento_relativo], BLANK())) // Se a pizza estiver entre as cinco primeiras ou as cinco últimas em faturamento, mostra seu faturamento. 
+
+RETURN _resultado
+```
+
+```DAX
+maiores_piores_qtd_vendida = // Segue o mesmo princípio do anterior, mas trocando o faturamento pela quantidade de pizzas vendidas
+
+VAR _rank_top = RANKX(ALL(pizza_types[name]), [qtd_vendida], , DESC, DENSE)
+
+VAR _rank_bottom = RANKX(ALL(pizza_types[name]), [qtd_vendida], , ASC, DENSE)
+
+VAR _resultado = IF(_rank_top <= 5, [qtd_vendida], IF(_rank_bottom <= 5, [qtd_vendida], BLANK()))
+
+RETURN _resultado
+```
+
+```DAX
+rank_cor_qtd_vendida = RANKX(ALL(pizza_types[name]), [qtd_vendida], , DESC, DENSE) // Classifica as pizzas por quantidade vendida em ordem decrescente. É usado na formatação condicional que muda a cor no gráfico Ranking: maiores e menores vendas
+```
+
+```DAX
+rank_cor_faturamento = 
+RANKX(ALL(pizza_types[name]), [faturamento_relativo], , DESC, DENSE) // Similar ao código acima, só que pegando o faturamento em vez da quantidade
+```
