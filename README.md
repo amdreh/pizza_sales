@@ -21,13 +21,14 @@ Este projeto visa transformar dados transacionais em indicadores estratégicos p
 O objetivo central é responder a perguntas críticas de negócio:
 * Quais são as 5 melhores e as 5 piores pizzas por faturamento e por quantidade vendida?
 * Qual é o tamanho de pizza mais vendido?
-* Qual foi o faturamento mês a mês do ano? E trimestre a trimestre?
+* Qual foi o faturamento mês a mês do ano? 
 * Qual foi o faturamento médio de cada dia da semama?
 
 Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Margem de Lucro** para orientar decisões estratégicas, como:
 * Identificar em quais sabores focar as ações de marketing.
 * Analisar onde é necessário reduzir custos operacionais.
 * Definir quais produtos devem receber promoções ou serem retirados do cardápio.
+* Definir pelo faturamento médio qual seria o melhor dia da semana para fechar a pizzaria ou reduzir o horário de funcionamento.
 
 ---
 
@@ -70,9 +71,9 @@ Os arquivos do projeto estão organizados da seguinte forma:
 ---
 
 ### 📅 Roadmap de Evolução
-- [x] **Fase 1:** Modelagem de Dados, Relacionamentos e Dicionário DAX.
-- [ ] **Fase 2:** Desenvolvimento do Dashboard Interativo no Power BI (UX/UI Design).
-- [ ] **Fase 3:** Publicação do Relatório Final de Insights e Recomendações.
+- [x] **Fase 1:** Modelagem de dados, relacionamentos e dicionário DAX.
+- [x] **Fase 2:** Desenvolvimento do dashboard interativo no Power BI (UX/UI Design).
+- [ ] **Fase 3:** Publicação do relatório final de insights e recomendações.
 
 ---
 **Desenvolvido por André Garcia** *Analista de Dados em transição*
