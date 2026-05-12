@@ -1,6 +1,6 @@
 # [ESTUDO DE CASO] Aquele da Pizzaria🍕 
 
-![Status](https://img.shields.io/badge/Status-Fase%201%20Conclu%C3%ADda-green)
+![Status](https://img.shields.io/badge/Status-Fase%202%20Conclu%C3%ADda-green)
 ![Tecnologia](https://img.shields.io/badge/Tecnologia-Power%20BI%20%2F%20DAX-yellow)
 
 ## 👤 Autor
@@ -35,11 +35,11 @@ Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Marg
 ### 🚀 Modelagem de dados:
 As medidas criadas com código DAX estão demonstradas e comendadas no arquivo [dax.md](https://github.com/amdreh/pizza_sales/blob/main/1_modelagem_dax/dax.md), onde estão dividos conforme abaixo:
 
-* 1- Venda de pizza por sabor
-* 2- Venda de pizza por tamanho
-* 3- Desempenho de vendas mensal/trimestral
-* 4- Faturamento médio de cada dia da semana
-* 5- Margem de lucro x Share de vendas
+1- Venda de pizza por sabor
+2- Venda de pizza por tamanho
+3- Desempenho de vendas mensal/trimestral
+4- Faturamento médio de cada dia da semana
+5- Margem de lucro x Share de vendas
 
 ---
 
