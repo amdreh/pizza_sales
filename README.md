@@ -1,10 +1,11 @@
+[![Translate to English](https://img.shields.io/badge/Translate_to-English-blue?style=for-the-badge&logo=googletranslate)](https://github.com/amdreh/pizza_sales/blob/main/readme_EN.md)
 # [ESTUDO DE CASO] Aquele da Pizzaria🍕 
 
 ![Status](https://img.shields.io/badge/Status-Fase%202%20Conclu%C3%ADda-green)
 ![Tecnologia](https://img.shields.io/badge/Tecnologia-Power%20BI%20%2F%20DAX-yellow)
 
 ## 👤 Autor
-**André Garcia** *Analista de Dados em transição do jornalismo cultural para o mercado de tecnologia. Em busca de oportunidade para atuar na transformação de dados brutos em inteligência estratégica e suporte à decisão.*
+**André Garcia**: *Analista de Dados em transição do jornalismo cultural para o mercado de tecnologia. Em busca de oportunidade para atuar na transformação de dados brutos em inteligência estratégica e suporte à decisão.*
 
 ---
 
