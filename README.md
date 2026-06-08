@@ -26,21 +26,20 @@ O objetivo central é responder a perguntas críticas de negócio:
 * Qual foi o faturamento médio de cada dia da semama?
 
 Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Margem de Lucro** para orientar decisões estratégicas, como:
-* Identificar em quais sabores focar as ações de marketing.
-* Analisar onde é necessário reduzir custos operacionais.
-* Definir quais produtos devem receber promoções ou serem retirados do cardápio.
-* Definir pelo faturamento médio qual seria o melhor dia da semana para fechar a pizzaria ou reduzir o horário de funcionamento.
+* Otimização de Estoque e Escala de Funcionários.
+* Direcionamento de Campanhas de Marketing.
+* Decisões de Cardápio Baseadas em Dados.
 
 ---
 
 ### 🚀 Modelagem de dados:
 As medidas criadas com código DAX estão demonstradas e comendadas no arquivo [dax.md](https://github.com/amdreh/pizza_sales/blob/main/1_modelagem_dax/dax.md), onde estão dividos conforme abaixo:
 
-1- Venda de pizza por sabor
-2- Venda de pizza por tamanho
-3- Desempenho de vendas mensal/trimestral
-4- Faturamento médio de cada dia da semana
-5- Margem de lucro x Share de vendas
+1. **Venda de pizza por sabor**
+2. **Venda de pizza por tamanho**
+3. **Desempenho de vendas mensal/trimestral**
+4. **Faturamento médio de cada dia da semana**
+5. **Margem de lucro x Share de vendas**
 
 ---
 
