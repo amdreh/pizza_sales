@@ -25,9 +25,9 @@ O objetivo central é responder a perguntas críticas de negócio:
 * Qual foi o faturamento mês a mês do ano? 
 * Qual foi o faturamento médio de cada dia da semama?
 
-Além disso, o projeto realiza um **comparativo entre o Share de Vendas e a Margem de Lucro** para orientar decisões estratégicas, como:
-* Otimização de Estoque e Escala de Funcionários.
-* Direcionamento de Campanhas de Marketing.
+E a partir daí orientar decisões estratégicas, como:
+* Otimização de Estoque e Escala de Funcionários;
+* Direcionamento de Campanhas de Marketing;
 * Decisões de Cardápio Baseadas em Dados.
 
 ---
@@ -49,6 +49,30 @@ Na primeira fase, utilizei código DAX para implementar regras de negócio robus
 1. **Cálculo de Margem Real:** Implementação de lógica para estimativa de custo de pizza por categoria (Veggie, Classic, Chicken, Supreme) considerando custos operacionais variáveis.
 2. **Matriz de Performance:** Cruzamento entre *Share* (Popularidade) e *Margem* (Rentabilidade) para classificação estratégica do mix de produtos.
 3. **Ranking de Estrelas:** Criação de um sistema de rating dinâmico para facilitar a leitura visual do desempenho de cada sabor no modelo.
+
+---
+
+### 📊 Dashboard & Visualização de Dados
+
+O relatório foi desenvolvido no **Power BI**, focado em entregar uma experiência visual intuitiva e interativa para o tomador de decisão. O painel consolida as principais métricas de vendas, faturamento e performance de produtos.
+
+* 📂 **Arquivos do Dashboard:** Você pode acessar os arquivos originais e a estrutura do relatório diretamente na pasta [2_dashboard](./2_dashboard).
+
+Abaixo, você confere uma prévia do design e da disposição dos elementos no relatório:
+
+![Visualização do Dashboard](https://github.com/amdreh/pizza_sales/blob/main/2_dashboard/Pizza%20Place%20Sales.jpg)
+
+---
+
+### 📊 Insights e Impacto de Negócio
+
+A partir da análise dos dados de vendas, identifiquei os seguintes pontos estratégicos:
+
+* **Otimização de Estoque e Escala de Funcionários:** O dia da semana de maior movimento é a sexta-feira, enquanto o domingo apresenta o menor volume. Com essa informação, o gerente pode planejar com precisão a escala de pizzaiolos e motoboys, além de ajustar o estoque de ingredientes para evitar a falta ou desperdícios.
+
+* **Direcionamento de Campanhas de Marketing:** Mapear quais pizzas e tamanhos possuem o maior volume de saída e quais geram mais receita permite criar promoções inteligentes, como "Combos" que unem produtos de alta margem com itens de menor saída para acelerar o giro do estoque.
+
+* **Decisões de Cardápio Baseadas em Dados (Data-Driven):** A análise revela quais pizzas performam consistentemente mal. Com isso, o gestor ganha embasamento para retirar do menu as opções que não vendem, abrindo espaço para testar novos sabores sem inflar o custo operacional.
 
 ---
 
