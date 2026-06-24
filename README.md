@@ -12,7 +12,7 @@
 ## 📖 Sobre o Projeto
 
 ### Introdução
-Este repositório documenta o desenvolvimento de uma solução de Business Intelligence (BI) para uma pizzaria fictícia, focada em transformar dados brutos em inteligência de negócio por meio de modelagem em DAX. Em vez de relatórios apenas visuais, priorizei o cálculo de margens reais e rentabilidade para criar a base estratégica dos futuros dashboards e relatórios de insights.
+Este repositório documenta o desenvolvimento de uma solução de Business Intelligence (BI) para uma [pizzaria fictícia](https://www.kaggle.com/datasets/mysarahmadbhat/pizza-place-sales?select=pizza_types.csv), focada em transformar dados brutos em inteligência de negócio por meio de modelagem em DAX. Em vez de relatórios apenas visuais, priorizei o cálculo de margens reais e rentabilidade para criar a base estratégica dos futuros dashboards e relatórios de insights.
 
 Este projeto visa transformar dados transacionais em indicadores estratégicos para suporte à tomada de decisão, analisando a performance comercial e a saúde financeira da operação.
 
